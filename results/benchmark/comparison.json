@@ -1,0 +1,24 @@
+{
+  "variants": {
+    "baseline": {
+      "run": "baseline-r1",
+      "seconds20": 70.83294801303418,
+      "videos_per_second": 0.2823544771328696,
+      "tokens20": 5205,
+      "seconds50": 188.7043501670123,
+      "tokens50": 12918,
+      "truncated50": 0
+    },
+    "optimized": {
+      "run": "optimized-r1",
+      "seconds20": 66.36974648199975,
+      "videos_per_second": 0.3013421183614771,
+      "tokens20": 4949,
+      "seconds50": 170.21515825402457,
+      "tokens50": 12370,
+      "truncated50": 0
+    }
+  },
+  "throughput_increase_percent": 6.724753020180518,
+  "time_reduction_percent": 6.301024673169242
+}

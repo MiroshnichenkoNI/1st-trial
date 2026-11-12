@@ -1,0 +1,303 @@
+{
+  "status": "passed",
+  "counts": {
+    "ordinary_measured": 10,
+    "ordinary_warmup": 10,
+    "benchmark_measured": 100,
+    "benchmark_warmup": 20,
+    "total": 140
+  },
+  "score_invariance": {
+    "baseline": {
+      "technical_score": 50,
+      "aesthetic_score": 50
+    },
+    "optimized": {
+      "technical_score": 50,
+      "aesthetic_score": 50
+    }
+  },
+  "zero_score_ranges": {
+    "baseline": true,
+    "optimized": true
+  },
+  "text_matches": {
+    "ordinary_vs_archived": {
+      "matched": 8,
+      "total": 10,
+      "fraction": 0.8
+    },
+    "benchmark_vs_ordinary": {
+      "baseline": {
+        "matched": 29,
+        "total": 50,
+        "fraction": 0.58
+      },
+      "optimized": {
+        "matched": 33,
+        "total": 50,
+        "fraction": 0.66
+      }
+    },
+    "benchmark_vs_archived": {
+      "baseline": {
+        "matched": 33,
+        "total": 50,
+        "fraction": 0.66
+      },
+      "optimized": {
+        "matched": 35,
+        "total": 50,
+        "fraction": 0.7
+      }
+    }
+  },
+  "language": {
+    "baseline": {
+      "rows_without_cyrillic": 5,
+      "per_video": {
+        "5.mp4": {
+          "total_rows": 5,
+          "rows_without_cyrillic": 5
+        }
+      }
+    },
+    "optimized": {
+      "rows_without_cyrillic": 5,
+      "per_video": {
+        "5.mp4": {
+          "total_rows": 5,
+          "rows_without_cyrillic": 5
+        }
+      }
+    }
+  },
+  "speed": {
+    "variants": {
+      "baseline": {
+        "run": "baseline-r1",
+        "seconds20": 70.83294801303418,
+        "videos_per_second": 0.2823544771328696,
+        "tokens20": 5205,
+        "seconds50": 188.7043501670123,
+        "tokens50": 12918,
+        "truncated50": 0,
+        "full_videos_per_second": 0.26496474488133226,
+        "generated_tokens_per_second20": 73.48275267382931,
+        "generated_tokens_per_second50": 68.456291487541
+      },
+      "optimized": {
+        "run": "optimized-r1",
+        "seconds20": 66.36974648199975,
+        "videos_per_second": 0.3013421183614771,
+        "tokens20": 4949,
+        "seconds50": 170.21515825402457,
+        "tokens50": 12370,
+        "truncated50": 0,
+        "full_videos_per_second": 0.29374587147744696,
+        "generated_tokens_per_second20": 74.56710718854751,
+        "generated_tokens_per_second50": 72.67272860352038
+      }
+    },
+    "throughput_speedup": 1.0672475302018052,
+    "throughput_increase_percent": 6.724753020180518,
+    "time_reduction_percent": 6.301024673169242,
+    "saved_comparison_matches_independent_recalculation": true,
+    "protocol_note": "Exactly one fresh baseline process and one fresh optimized process; no median, independent-run variability estimate, or statistical significance claim.",
+    "workload_note": "Same videos and generation cap; generated token counts can differ. Video throughput is not a constant-token workload comparison."
+  },
+  "all_stop": true,
+  "all_fresh_rows": {
+    "rows": 140,
+    "finish_reasons": {
+      "stop": 140
+    },
+    "exact_raw_scores_vs_archived": {
+      "technical_score": 140,
+      "aesthetic_score": 140
+    },
+    "without_cyrillic_by_video": {
+      "5.mp4": 14
+    }
+  },
+  "workload_comparison": {
+    "20": {
+      "baseline_tokens": 5205,
+      "optimized_tokens": 4949,
+      "optimized_minus_baseline_tokens": -256,
+      "optimized_token_reduction_percent": 4.91834774255524
+    },
+    "50": {
+      "baseline_tokens": 12918,
+      "optimized_tokens": 12370,
+      "optimized_minus_baseline_tokens": -548,
+      "optimized_token_reduction_percent": 4.242142746555199
+    }
+  },
+  "full50_descriptive_speed": {
+    "throughput_increase_percent": 10.862247582788687,
+    "time_reduction_percent": 9.797968036573568
+  },
+  "setup": {
+    "stage": "setup",
+    "command": [
+      "bash",
+      "setup.sh"
+    ],
+    "cwd": "/home/shxmbxlx/simple-validation-20261112/project",
+    "runner_pid": 384,
+    "started": "2026-11-12T14:32:04.514860+00:00",
+    "state": "finished",
+    "command_pid": 385,
+    "returncode": 0,
+    "finished": "2026-11-12T14:36:30.713921+00:00",
+    "elapsed_seconds": 266.1988224099623
+  },
+  "gpu_after": [
+    {
+      "index": 0,
+      "name": "Tesla V100-PCIE-32GB",
+      "uuid": "GPU-e3e4343f-5525-5417-df3b-75eab41dd7af",
+      "used_mb": 273,
+      "total_mb": 32768,
+      "processes": []
+    }
+  ],
+  "input_sha256": {
+    "10.mp4": "d9403533a859a4208b043597b9d0416ca9116595362d2148e3aef7bb22d2e18e",
+    "8.mp4": "03e850c173ab20909f53804bcbbbc98d27a017e165662b7665e2ad6bcbeda14f",
+    "4.mp4": "4170c5c1532fc426e5bb611eff7bade0c3800b66b6e8d4a53b72c06d742ada13",
+    "3.mp4": "b75555a6b474e1eee4401464a77e0c95ae1d22f0a85cd81b0a5f46471355b6ba",
+    "7.mp4": "5a20125546417b60cf45d8ad7b930478b6fee76b4284dd67b08d03e617a0d955",
+    "9.mp4": "3c49441b86ce7cea6f5f386a5c8faa1fc856cefcc4e1078bf40981096247cc71",
+    "6.mp4": "076c6aecd1add4f18c6c6937f918cd9b381bca3d6b1cfaf2f6d2cd5d1722f100",
+    "1.mp4": "7717a185eb0cfff54a4f03d5bf1c65c605dad8ecd685c058207b819109525726",
+    "5.mp4": "12e295b790bf22f826f15a587e0772de96cf6e800e47d588df3c982d825e3f1b",
+    "2.mp4": "7545f7fe15e4ddd4b8a6c6ac312f1ce6235bfebee045cf4e0d6221ee0775527d"
+  },
+  "runtime": {
+    "driver": "580.196.07",
+    "packages": {
+      "torch": "2.9.0",
+      "transformers": "4.57.1",
+      "vllm": "0.11.2",
+      "numpy": "2.2.6",
+      "av": "19.0.2"
+    }
+  },
+  "benchmark_control": {
+    "requested_runs_per_mode": 1,
+    "actual_trials": [
+      "baseline-r1",
+      "optimized-r1"
+    ],
+    "baseline_exitcode": 0,
+    "baseline_exit_evidence": "check=True coordinator started optimized only after successful baseline",
+    "optimized_pid": 2174,
+    "optimized_exit_status": 0,
+    "coordinator_termination": "SIGTERM after SIGSTOP, intentional user limit; both GPU runs finished",
+    "model_source_changed": false,
+    "benchmark_change": "one pair instead of three; metric unchanged"
+  },
+  "source_sha256": {
+    "setup.sh": "911ee29b033a55361eb87a1548d37b1db96af55371621f38eb62836b793cc711",
+    "run.py": "e9454e684b057b2de0637f610e88832b4649a4c94496cf6f7b37bd4ac0f034f8",
+    "benchmark.py": "ad77c3ce480258cd18a5a977fd5e7c84d8d187cb312aee47e89c7d1a37de48ea",
+    "requirements.txt": "b5ef195ac5846c83530da6461e3739503091e9e41bee6a30b1398adf2fefa118",
+    "REPORT.md": "9fe2f3617f955be0735fad4d3d7a9a61b026222c1d986a328eddb214b50f7b08",
+    "run.sh": "91d80d0c1fcd8be4d621d3dfed58625150dc6e7d53f713448f843939c322cf94",
+    "README.md": "1b036fa053b92db0e9e7d80a99f416beda94ae2889bb2c508eabba1723f85e15",
+    "vllm_extensions.py": "ccefb63f5f0b9c4f2c845d757b3ccc8875eb590467b5ee001334934dc768170d",
+    ".gitignore": "3ccdc4f5247a80dac5e70be385f306d4fb8074af9237a5d66f54303a395247ff",
+    "pipeline.py": "1e154cfeef90ffc5bc2d4fccf6bf53b522d8fd7c6bd8a4caf6004c6e32f1da12",
+    "qwen.py": "c7b7cfa6190df3a6adf0f936e70dfe5b82fc9bbfa7b881da48ea6e9989c058dc",
+    "pipeline_cuda.py": "d64ecc57a92cb979f72b5e22d545052477a6a764ec2392f79e58a0310e26b7b8",
+    "prepare.py": "a0073ce37dbf794cae3952e603af4a3b194ec64ab9dfb824cbe6e4949c1d654c"
+  },
+  "independent_review": "PASS_WITH_LIMITATIONS: one pair, differing output token counts, frame-sampled qualitative review",
+  "post_measurement_update": {
+    "date": "2026-11-12",
+    "removed_guards": 5,
+    "changes": [
+      "fixed_window uses completion order for the fixed four/singleton group contract",
+      "phase_run no longer rechecks its own scheduler mapping",
+      "finite DOVER score check delegated to JSON allow_nan=False; unused path parameter removed",
+      "REPORT rewritten with methods, model settings, historical attempts and future optimizations"
+    ],
+    "source_sha256": {
+      "setup.sh": "911ee29b033a55361eb87a1548d37b1db96af55371621f38eb62836b793cc711",
+      "run.py": "266544af52e0c82dbd778a250b64be0d8e95c4ba63d00f025f1373afaed77e42",
+      "benchmark.py": "c8b3c0a273d5a9f2e502a7c3099a96fd947e664cf0bc7087188a421d6db0c1a8",
+      "requirements.txt": "b5ef195ac5846c83530da6461e3739503091e9e41bee6a30b1398adf2fefa118",
+      "REPORT.md": "89cfc55fc99ecf6ca4b52082528c766b50c96bee0ae345405ba7bfca36748d32",
+      "run.sh": "91d80d0c1fcd8be4d621d3dfed58625150dc6e7d53f713448f843939c322cf94",
+      "README.md": "1b036fa053b92db0e9e7d80a99f416beda94ae2889bb2c508eabba1723f85e15",
+      "vllm_extensions.py": "ccefb63f5f0b9c4f2c845d757b3ccc8875eb590467b5ee001334934dc768170d",
+      ".gitignore": "3ccdc4f5247a80dac5e70be385f306d4fb8074af9237a5d66f54303a395247ff",
+      "pipeline.py": "9f9dd6e047b180771a5b5d1415184f4f886ed040e863e93fd2257fc180651ed5",
+      "qwen.py": "c7b7cfa6190df3a6adf0f936e70dfe5b82fc9bbfa7b881da48ea6e9989c058dc",
+      "pipeline_cuda.py": "e4c9cf573318d4a8d40fa8c8560cd572af744aada7c936c640a9143c4db24761",
+      "prepare.py": "a0073ce37dbf794cae3952e603af4a3b194ec64ab9dfb824cbe6e4949c1d654c"
+    },
+    "checks": {
+      "baseline": {
+        "exact_metric_match": true,
+        "seconds": 70.83294801303418,
+        "job_ids": [
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24,
+          25,
+          26,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      },
+      "optimized": {
+        "exact_metric_match": true,
+        "seconds": 66.36974648199975,
+        "job_ids": [
+          12,
+          13,
+          16,
+          14,
+          15,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          26,
+          24,
+          25,
+          27,
+          28,
+          29,
+          30,
+          31
+        ]
+      },
+      "unbalanced_window_rejected": true,
+      "python_syntax": "passed",
+      "gpu_rerun": false,
+      "raise_count": 13
+    },
+    "gpu_rerun": false,
+    "note": "Recorded GPU measurements and the earlier source_sha256 identify the measured revision. Later edits were checked on saved results, not by new GPU runs."
+  }
+}
