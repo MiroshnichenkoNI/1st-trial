@@ -6,3 +6,6 @@ inputs/
 out/
 __pycache__/
 *.pyc
+REPORT.md
+benchmark.py
+results/
